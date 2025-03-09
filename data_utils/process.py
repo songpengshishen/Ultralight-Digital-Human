@@ -11,8 +11,7 @@ def extract_audio(path, out_path, sample_rate=16000):
     print(f'[INFO] ===== extracted audio =====')
     
 def extract_images(path, mode):
-    
-    
+
     full_body_dir = path.replace(path.split("/")[-1], "full_body_img")
     if not os.path.exists(full_body_dir):
         os.mkdir(full_body_dir)
@@ -20,6 +19,7 @@ def extract_images(path, mode):
     counter = 0
     cap = cv2.VideoCapture(path)
     fps = cap.get(cv2.CAP_PROP_FPS)
+
     if mode == "hubert" and fps != 25:
         raise ValueError("Using hubert,your video fps should be 25!!!")
     if mode == "wenet" and fps != 20:
@@ -66,7 +66,7 @@ def get_landmark(path, landmarks_dir):
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('path', type=str, help="path to video file")
+    parser.add_argument('--path', type=str, default='/Users/wangsongpeng/PycharmProjects/Ultralight-Digital-Human/maochao/数字人视频.mp4', help="path to video file")
     parser.add_argument('--asr', type=str, default='hubert', help="wenet or hubert")
     opt = parser.parse_args()
     asr_mode = opt.asr
@@ -77,8 +77,8 @@ if __name__ == "__main__":
 
     os.makedirs(landmarks_dir, exist_ok=True)
     
-    extract_audio(opt.path, wav_path)
-    extract_images(opt.path, asr_mode)
+    #extract_audio(opt.path, wav_path)
+    #extract_images(opt.path, asr_mode)
     get_landmark(opt.path, landmarks_dir)
     get_audio_feature(wav_path, asr_mode)
     
