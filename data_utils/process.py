@@ -66,7 +66,7 @@ def get_landmark(path, landmarks_dir):
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
-    parser.add_argument('--path', type=str, default='/Users/wangsongpeng/PycharmProjects/Ultralight-Digital-Human/maochao/数字人视频.mp4', help="path to video file")
+    parser.add_argument('--path', type=str, default='E:\pyProject/Ultralight-Digital-Human/maochao/数字人视频.mp4', help="path to video file")
     parser.add_argument('--asr', type=str, default='hubert', help="wenet or hubert")
     opt = parser.parse_args()
     asr_mode = opt.asr
@@ -80,6 +80,6 @@ if __name__ == "__main__":
     #extract_audio(opt.path, wav_path)
     #extract_images(opt.path, asr_mode)
     get_landmark(opt.path, landmarks_dir)
-    get_audio_feature(wav_path, asr_mode)
+    #get_audio_feature(wav_path, asr_mode)
     
     
