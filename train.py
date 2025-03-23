@@ -16,10 +16,10 @@ import torchvision.models as models
 def get_args():
     parser = argparse.ArgumentParser(description='Train',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument('--use_syncnet', action='store_true', help="if use syncnet, you need to set 'syncnet_checkpoint'")
-    parser.add_argument('--syncnet_checkpoint', type=str, default="")
-    parser.add_argument('--dataset_dir', type=str)
-    parser.add_argument('--save_dir', type=str, help="trained model save path.")
+    parser.add_argument('--use_syncnet',default=True, action='store_true', help="if use syncnet, you need to set 'syncnet_checkpoint'")
+    parser.add_argument('--syncnet_checkpoint', type=str, default='E:\pyProject/Ultralight-Digital-Human/maochao/syncnet_ckpt/35.pth')
+    parser.add_argument('--dataset_dir', type=str, default='E:\pyProject/Ultralight-Digital-Human/maochao/')
+    parser.add_argument('--save_dir', type=str,default='E:\pyProject/Ultralight-Digital-Human/maochao/checkpoint/', help="trained model save path.")
     parser.add_argument('--see_res', action='store_true')
     parser.add_argument('--epochs', type=int, default=200)
     parser.add_argument('--batchsize', type=int, default=1)

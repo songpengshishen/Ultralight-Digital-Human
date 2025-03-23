@@ -244,9 +244,9 @@ def train(save_dir, dataset_dir, mode):
     
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--save_dir', type=str)
-    parser.add_argument('--dataset_dir', type=str)
-    parser.add_argument('--asr', type=str)
+    parser.add_argument('--save_dir', default='E:\pyProject/Ultralight-Digital-Human/maochao/syncnet_ckpt/', type=str)
+    parser.add_argument('--dataset_dir', default='E:\pyProject/Ultralight-Digital-Human/maochao/', type=str)
+    parser.add_argument('--asr', default='hubert', type=str)
     opt = parser.parse_args()
     
     # syncnet = SyncNet_color(mode=opt.asr)

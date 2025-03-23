@@ -63,6 +63,8 @@ def get_landmark(path, landmarks_dir):
                 f.write(str(y))
                 f.write("\n")
 
+    print("detecting landmarks end...")
+
 if __name__ == "__main__":
     
     parser = argparse.ArgumentParser()
@@ -79,7 +81,9 @@ if __name__ == "__main__":
     
     #extract_audio(opt.path, wav_path)
     #extract_images(opt.path, asr_mode)
-    get_landmark(opt.path, landmarks_dir)
-    #get_audio_feature(wav_path, asr_mode)
+    #get_landmark(opt.path, landmarks_dir)
+    #print("get_landmark end...")
+    get_audio_feature(wav_path, asr_mode)
+    print("get_audio_feature end...")
     
     
