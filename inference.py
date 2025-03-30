@@ -17,8 +17,8 @@ parser = argparse.ArgumentParser(description='Train',
 
 parser.add_argument('--asr', type=str, default="hubert")
 parser.add_argument('--dataset', type=str, default="E:\pyProject/Ultralight-Digital-Human/maochao/")
-parser.add_argument('--audio_feat', type=str, default="E:\pyProject/Ultralight-Digital-Human/maochao/aud_hu.npy")
-parser.add_argument('--save_path', type=str, default="E:\pyProject/Ultralight-Digital-Human/maochao/生成无音频数字人视频.mp4")     # end with .mp4 please
+parser.add_argument('--audio_feat', type=str, default="E:\pyProject/Ultralight-Digital-Human/maochao/乳饮吧讲解商品_hu.npy")
+parser.add_argument('--save_path', type=str, default="E:\pyProject/Ultralight-Digital-Human/maochao/乳饮吧数字人02视频.mp4")     # end with .mp4 please
 parser.add_argument('--checkpoint', type=str, default="E:\pyProject/Ultralight-Digital-Human/maochao/checkpoint/60.pth")
 args = parser.parse_args()
 

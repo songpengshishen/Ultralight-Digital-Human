@@ -75,7 +75,7 @@ from argparse import ArgumentParser
 import librosa
 
 parser = ArgumentParser()
-parser.add_argument('--wav', type=str, default='E:\pyProject/Ultralight-Digital-Human/maochao/aud.wav', help='')
+parser.add_argument('--wav', type=str, default='E:\pyProject/Ultralight-Digital-Human/maochao/乳饮吧讲解商品.wav', help='')
 args = parser.parse_args()
 
 wav_name = args.wav
